@@ -1,0 +1,74 @@
+@import "@/styles/_variables.scss";
+
+:root {
+
+    --font-family-element: "Ubuntu", sans-serif;
+    --font-weight-element: 400;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+
+html {
+    font-family: var(--font-family-element);
+    font-weight: var(--font-weight-element);
+    font-size: $secondSize;
+    line-height: $lineHeight;
+    box-sizing: border-box;
+    height: 100vh;
+  
+    color: #000000;
+    background-color: #3F72AF;
+}
+
+
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+#app {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+.todo-form {
+    margin: 0 auto;
+    margin-top: 56px;
+    background-color: $form-color;
+    border-radius: $form-radius;
+    max-width: $formDesktopWidth;
+    box-shadow: $shadow;
+
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 768px) {
+    .todo-form {
+        max-width: 80%;
+        min-height: 80%;
+    }
+   
+}
+
+@media only screen and (max-width: 390px) {
+    .todo-form {
+        max-width: 350px;
+        min-height: 500px;
+    }
+   
+}
+
